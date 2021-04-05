@@ -1,0 +1,16 @@
+.imgDelete {
+    width: 30px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    height: 30px;
+}
+.profile{
+    text-align:left;
+    max-height: 200px;
+       
+}
+.inputProfile{
+margin-left: -5px;
+       
+}

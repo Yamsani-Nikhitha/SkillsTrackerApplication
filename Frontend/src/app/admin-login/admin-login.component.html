@@ -1,0 +1,47 @@
+<div class="topnav">
+
+</div>
+
+<div class="container">
+    
+    <div class="row">
+        <br><h1 class="headig display-4"><b><i>Welcome to Skills Tracker,</i></b></h1><br>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img class="img-fluid skillsimage" src="../../assets/images/skills.jpg" alt="Can't load image">
+        </div>
+        <div class="col-md-8">
+            <div class="row login-Page">
+                <div class="col-md-12 adminLogindiv" id="adminLogindiv" >
+                    <h2><b>ADMIN LOGIN</b></h2>
+                </div>
+                <!-- Lgin Admin Starts -->
+                <div class="col-md-12 login-form-2" id="login-form-2" >
+                    <form #adminLoginForm="ngForm"><br>
+                        <div class="form-group">
+                            <input type="text" id="adminUserName" name="adminUserName" class="form-control" placeholder="Admin User name" required 
+                            [(ngModel)] = "theAdmin.adminUserName"
+                            ngModel name="adminUserName" #adminUserName="ngModel"/>
+                            <div class="alert alert-danger" *ngIf="adminUserName.touched && !adminUserName.valid">Please enter valid Username</div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="adminPassword" name="adminPassword" class="form-control" placeholder="Your password" required 
+                            [(ngModel)] = "theAdmin.adminPassword"
+                            ngModel name="adminPassword" #adminPassword="ngModel"/>
+                            <div class="alert alert-danger" *ngIf="adminPassword.touched && !adminPassword.valid">Please enter Password to continue</div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btnSubmit btn-primary" (click) = "adminLogin('HrDetails')"
+                                [disabled]="adminLoginForm.form.invalid">
+                                <b>Login</b>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- login Admin Ends -->
+            </div>
+        </div>
+    </div>
+</div>
+

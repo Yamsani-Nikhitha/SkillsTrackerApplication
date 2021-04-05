@@ -1,0 +1,51 @@
+       
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="topnav row">
+    <div class="col-11" style="vertical-align: middle;">
+    </div>
+    <div class="col-1">
+        <p><a style="color: white;" href="Adminloginpage"><br>Logout</a></p>
+    </div>
+</div>
+<div class="container login-container"><br>
+    <!-- <div class="row"> -->
+        <!-- <div class="col-md-6  login-form-1"> -->
+            <h3 style="text-align: center; padding: 30px; margin-left: 15px;"><strong>Add New HR Manager</strong> </h3>
+            <form #addNewHrForm="ngForm">
+                <div class="form-group text-center border border-dark p-3 m-3" style="margin-top:20px;">
+                    <div class="row m-3">
+                        <div class="col-m-6 w-100">
+                            <input type="text" id="name" #hrname value="" class="form-control" placeholder="HR Full name" required 
+                                ngModel name="name" #name = "ngModel" [(ngModel)] = "theHrManager.hrName"/>
+                                <br>
+                        </div>
+                        <div class="alert alert-danger" *ngIf="name.touched && !name.valid">Please Enter HR Name</div>
+                    </div>
+
+                    <div class="row m-3">
+                        <div class="col-m-6 w-100">
+                        <input type="text" id="userName" #hrUserName class="form-control" placeholder="HR username" required 
+                            ngModel name="userName" #userName = "ngModel" [(ngModel)] = "theHrManager.hrUserName"/>
+                            <br>
+                        </div>
+                        <div class="alert alert-danger" *ngIf="userName.touched && !userName.valid">Please Enter UserName for HR</div>
+                    </div>
+
+                    <div class="row m-3">
+                        <div class="col-m-6 w-100">
+                        <input type="password" id="password" #hrPassword class="form-control" placeholder="HR password" required 
+                            ngModel name="password" #password = "ngModel" [(ngModel)] = "theHrManager.hrPassword"/>
+                            <br>
+                        </div>
+                        <div class="alert alert-danger" *ngIf="password.touched && !password.valid">Please Enter Password for HR</div>
+                    </div>
+                    <button (click) = "addNewHrManager()" [disabled]="addNewHrForm.form.invalid"><b>Add HR Details</b></button>
+                </div>
+            </form>
+        <!-- </div> -->
+	<!-- </div> -->
+</div>
+

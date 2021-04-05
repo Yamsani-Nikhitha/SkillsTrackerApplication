@@ -1,0 +1,81 @@
+<!-- <p>search-associate works!</p> -->
+
+<!-- <div class="infoHeading row">
+    <div class="col-9">
+        <h4>Welcome John,</h4>
+    </div>
+    <div class="addAssociate col-1">
+        <p><a href="add-associate">Add Associate</a> </p>
+    </div>
+    <div class="col-1">
+        <p><a href="add-skill">Add <br>Skills</a></p>
+    </div>
+</div> -->
+
+<div class="display ">
+    <!-- <div class="searchMechanism">
+        <button id="search-button" type="button" (click)="searchForAll()" class="searchAll btn btn-primary">
+            Search All Associates
+        </button><br>
+        <div class="searchCriteria input-group">
+            <select class="form-control" id="searchOption" ngModel name="searchOption" #searchOption="ngModel" required
+                (change)="displaySearchOption(searchOption)">
+                <option value="">Select one</option>
+                <option value="associateId">search By Id</option>
+                <option value="associateName">search By Name</option>
+                <option value="associateEmail">search By Email</option>
+                <option value="skillName">search By Skills</option>
+            </select>
+            <div class="form-outline">
+                <input id="search-input" type="search" id="form1" class="form-control" [(ngModel)]="searchValue"
+                    onfocus=" " />
+            </div>
+            <button id="search-button" type="button" (click)="searchForUser()" class="btn btn-primary">
+                Search
+            </button>
+        </div>
+    </div><br> -->
+
+
+    <!-- <div style="width:60%; float:left;"> 
+        <input type="search" id="search-field" placeholder="Search by Id,Name,Email,Skill and Mobile"
+            class="form-control" [(ngModel)]="searchValue" onfocus="" />
+        <button class="btn btn-primary">Search</button>
+    </div> -->
+
+    <div class="search-hero">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchValue" autocomplete="off"
+            placeholder="&#61442; Search by Id,Name,Email,Skill and Mobile">
+    </div>
+
+    <div class="associateDetails text-center row">
+        <ul class="list-inline list-unstyled">
+            <li class="list-inline-item"
+                *ngFor="let value of responseData |filter:searchValue| paginate:{itemsPerPage:5,currentPage: p }">
+                <div class="card text-dark bg-white" style="width: 200px">
+                    <div class="card-body" [routerLink]="['/update-associate',value.associateId]">
+                        <img class="profilepicture img-fluid rounded-circle"
+                            [src]="value.profilePhoto" alt="Can't load image">
+                        <h5 class="card-title">{{value.associateName}}</h5>
+                        <p class="card-text "><a class="email" href="#">{{value.associateEmail}}</a><br>
+                        </p>
+                        <p class="card-text">{{value.associateMobileNo}}</p>
+
+                    </div>
+                </div>
+                <div class="card text-dark bg-white" style="width: 200px;" *ngIf="responseDataById && !responseData">
+                    <div class="card-body" [routerLink]="['/update-associate',responseDataById.associateId]">
+                        <img class=" profilepicture img-fluid rounded-circle " src="../../assets/images/profile.png "
+                            alt="Can 't load image">
+                        <h5 class="card-title">{{responseDataById.associateName}}</h5>
+                        <p class="card-text"><a href="#">{{responseDataById.associateEmail}}</a><br></p>
+                        <p class="card-text">{{responseDataById.associateMobileNo}}</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <pagination-controls class="text-center" (pageChange)="p = $event"></pagination-controls>
+</div>

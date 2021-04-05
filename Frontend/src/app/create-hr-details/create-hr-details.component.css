@@ -1,0 +1,16 @@
+.topnav {
+    background-color: black;
+    height: 65px;
+}
+.EditOption{
+    cursor: pointer;
+}
+.EditOption:hover{
+    color:skyblue
+}
+.deleteOption{
+    cursor: pointer;
+}
+.deleteOption:hover{
+    color:skyblue
+}

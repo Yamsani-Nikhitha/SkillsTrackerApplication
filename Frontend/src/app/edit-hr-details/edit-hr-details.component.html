@@ -1,0 +1,65 @@
+<div class="infoHeading row">
+</div>
+<h3 style="padding: 30px;margin-left: 15px;"><strong>Edit HR details</strong> </h3>
+<form #hrDetailsUpdateForm="ngForm">
+    <div class="form-group p-3 m-3 border border-dark" style="margin-top:20px;">
+        <div class="row m-3">
+            <div class="col-m-6 w-100">
+                <b>HR Name:</b>
+                <input type="text" id="hrManagerName" class="form-control" required 
+                ngModel name="hrManagerName" [(ngModel)]="theHrManager.hrName" 
+                #hrManagerName="ngModel"><br>
+            </div>
+            <!-- Create this division below the field for any validation messages -->
+            <div class="alert alert-danger" *ngIf="hrManagerName.touched && !hrManagerName.valid">
+                <div *ngIf="hrManagerName.errors.required">*required</div>
+            </div>
+            <br>
+        </div>
+        
+        <div class="row m-3">
+            <div class="col-m-6 w-100">
+                <b>HR User Name:</b>
+                <input type="text" id="hrManagerUserName" class="form-control" required 
+                ngModel name="hrManagerUserName" [(ngModel)]="theHrManager.hrUserName" 
+                #hrManagerUserName="ngModel" disabled="true"><br>
+            </div>
+            <!-- Create this division below the field for any validation messages -->
+            <div class="alert alert-danger" *ngIf="hrManagerUserName.touched && !hrManagerUserName.valid">
+                <div *ngIf="hrManagerUserName.errors.required" >*required</div>
+            </div>
+            <br>
+        </div>
+
+        <div class="row m-3">
+            <div class="col-m-6 w-100">
+                <b>HR Access Status:</b>
+                <input type="text" id="hrManageraccessStatus" class="form-control" required 
+                ngModel name="hrManageraccessStatus" [(ngModel)]="theHrManager.accessStatus" 
+                #hrManageraccessStatus="ngModel" disabled="true"    ><br>
+            </div>
+            <!-- Create this division below the field for any validation messages -->
+            <div class="alert alert-danger" *ngIf="hrManageraccessStatus.touched && !hrManageraccessStatus.valid">
+                <div *ngIf="hrManageraccessStatus.errors.required">*required</div>
+            </div>
+            <br>
+        </div>
+
+        <div class="row m-3">
+            <div class="col-m-6 w-100">
+                <b>HR Password:</b>
+                <input type="text" id="hrManagerPassword" class="form-control" required 
+                ngModel name="hrManagerPassword" [(ngModel)]="theHrManager.hrPassword" 
+                #hrManagerPassword="ngModel"><br>
+            </div>
+            <!-- Create this division below the field for any validation messages -->
+            <div class="alert alert-danger" *ngIf="hrManagerPassword.touched && !hrManagerPassword.valid">
+                <div *ngIf="hrManagerPassword.errors.required">*required</div>
+            </div>
+            <br>
+        </div>
+        <br>
+        <button type="button" (click)="editHrManager()" class=" btn btn-success btn-lg btn-block" [disabled]="!hrDetailsUpdateForm.form.valid" style="width: 200px;margin-left: 15px;">Update Details</button>
+    </div>
+</form>
+                

@@ -1,0 +1,82 @@
+/* body {
+    background-image: url("../../../assets/images/background.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+} */
+
+/* body {
+    background-image: url("../../../assets/images/background.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+} */
+
+.searchassociates {
+    width: 100%
+}
+
+.searchCriteria {
+    margin-top: 20px;
+    width: 60%
+}
+
+.profilepicture {
+    height: 100px;
+    width: 100px;
+}
+
+.infoHeading {
+    background-color: black;
+    color: white;
+}
+
+.searchMechanism {
+    margin-top: 30px;
+     margin-left: 30%; 
+}
+
+.searchAll {
+    margin-left: 20%;
+}
+
+.associateDetails>ul>li>div {
+    margin: 20px;
+}
+
+.addAssociate {
+    float: right;
+}
+
+.card-body{
+    border-radius: 12%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(8, 7, 42, 1) 75%, rgb(8, 10, 63) 100%);
+    color:white;
+    text-align: center;
+}
+.card-title{
+    color: navajowhite;
+}
+.email{
+    color: white !important;
+}
+.display{
+    margin-left: 3%;
+}
+
+
+.search-hero {
+    max-width: 500px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin:auto;
+  }
+  
+  .form-control {
+    box-shadow: 0 10px 40px 0 #B0C1D9;
+  }
+  .form-control::placeholder  {
+    font-family: FontAwesome;
+  }

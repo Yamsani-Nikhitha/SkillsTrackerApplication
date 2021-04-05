@@ -1,0 +1,49 @@
+<div class="topnav">
+
+</div>
+
+<div class="container">
+    
+    <div class="row">
+        <br><h1 class="headig display-4"><b><i>Welcome to Skills Tracker,</i></b></h1><br>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img class="img-fluid skillsimage" src="../../assets/images/skills.jpg" alt="Can't load image">
+        </div>
+        <div class="col-md-8">
+            <div class="row login-Page">
+                <div class="col-md-12 hrLogindiv" id="hrLogindiv" (click)="ActivateHrLogin()">
+                    <h2><b>HR LOGIN</b></h2>
+                </div>
+                
+                <!-- Login HR div Starts --> 
+                <div class="col-md-12 login-form-1" id="login-form-1" *ngIf="div1">
+                    <form #hrLoginForm="ngForm"><br>
+                        <div class="form-group">
+                            <input type="text" id="hrUserName" name="hrUserName" class="form-control" placeholder="HR User name" required 
+                            [(ngModel)] = "theHrManager.hrUserName"
+                            ngModel name="hrUserName" #hrUserName="ngModel"/>
+                        </div>
+                        <div class="alert alert-danger" *ngIf="hrUserName.touched && !hrUserName.valid">Please enter valid Username</div>
+                        <div class="form-group">
+                            <input type="password" id="hrPassword" name="hrPassword" class="form-control" placeholder="Your password" required 
+                            [(ngModel)] = "theHrManager.hrPassword"
+                            ngModel name="hrPassword" #hrPassword="ngModel"/>
+                        </div>
+                        <div class="alert alert-danger" *ngIf="hrPassword.touched && !hrPassword.valid">Please Enter Password to continue</div>
+                       
+                        <div class="form-group">
+                            <button type="submit" class="btnSubmit btn-primary" (click) = "hrManagerLogin('search-associate')" 
+                                [disabled]="hrLoginForm.form.invalid">
+                                <b>Login</b>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Login Hr Ends -->
+               
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+       
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="topnav row">
+    <div class="col-11" style="vertical-align: middle;">
+    </div>
+    <div class="col-1">
+        <p><a style="color: white;" href="Adminloginpage"><br>Logout</a></p>
+    </div>
+</div>
+
+ 
+<div class="container"><br>
+    <div class="row">
+        <div class="col-md-2">
+            <button id="createNewHr" type="button" (click)="createNewHR()">Create New HR</button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                <th>Name</th>
+                <th>UserName</th>
+                <th>Access Status</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let hrManager of responseData">
+                <td>{{ hrManager.hrName}}</td>
+                <td>{{ hrManager.hrUserName}}</td>
+                <td>{{ hrManager.accessStatus}}</td>
+                <td><p class="EditOption"[routerLink]="['/updateHrDetails', hrManager.hrUserName]">Edit</p></td>
+                <td><p class="deleteOption" (click)="deleteHrManager(hrManager.hrUserName)">Delete</p></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

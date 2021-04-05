@@ -1,0 +1,25 @@
+.editOption {
+    width: 20px;
+    position: absolute;
+    top: 13px;
+    right: 50px;
+    height: 20px;
+}
+
+.graph-css{
+    padding:3% 5% 5% 5%;
+}
+
+.jumbotron {
+    border: 1px solid black;
+    background-color:white;
+    padding:4%;
+  
+}
+.profilepicture {
+    height: 100px;
+    width: 100px;
+}
+
+
+

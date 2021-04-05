@@ -1,0 +1,65 @@
+.login-Page{
+    margin-top: 7%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+} 
+.headig{
+    margin-top: 2%;
+}
+.skillsimage{
+    margin-top: 15%;
+}
+.login-form-1{
+    padding: 2%;
+    background-color: blanchedalmond;
+}
+.hrLogindiv{
+    text-align: center;
+    background-color: blanchedalmond;
+    border:1px solid black;
+    cursor: pointer;
+    padding: 2%;
+    width:100%!important;
+}
+
+.login-form-1 h3{
+    text-align: center;
+    color:black;
+}
+
+.login-container form{
+    padding: 10%;
+}
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    margin-left: 25%;
+}
+
+.login-form-2 .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-form-1 .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+a{
+    color:#0e1115
+}
+a:hover{
+    text-decoration: none;
+    color:red
+}
+.topnav {
+    background-color: black;
+    height: 65px;
+}
+
